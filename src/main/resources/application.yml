@@ -1,0 +1,38 @@
+logging:
+    level:
+        com:
+            icl:
+                iclorder: DEBUG
+        org:
+            springframework:
+                security: DEBUG
+server:
+    port: 7070
+
+spring:
+    application:
+        name: icl-order
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/icl_order?useUnicode=true&characterEncoding=UTF-8
+        name: root
+        password: ''
+    profiles:
+        active: local
+    thymeleaf:
+      suffix: .html
+      prefix: classpath:/templates
+      mode: LEGACYHTML5
+      cache: false
+swagger:
+    enable: true
+
+mapper:
+    mappers: com.icl.iclorder.common.mapper.BaseMapper
+eureka:
+  client:
+    service-url:
+        defaultZone: http://127.0.0.1:8761/eureka/
+liquibase:
+  change-log: classpath:db/changelog/master.xml
+

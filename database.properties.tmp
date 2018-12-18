@@ -1,0 +1,9 @@
+driver=com.mysql.jdbc.Driver
+url=jdbc:mysql://localhost:3306/icl_order?createDatabaseIfNotExist=true
+username=root
+password=
+verbose=true
+dropFirst=false
+outputChangeLogFile=src/main/resources/db/changelog/init.xml
+
+
